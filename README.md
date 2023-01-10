@@ -1,4 +1,4 @@
-# [MoureDev Challenges 2022](https://mouredev.com/)
+# [MoureDev Challenges 2022](https://retosdeprogramacion.com/semanales2022)
 
 ## Fizz Buzz
 
