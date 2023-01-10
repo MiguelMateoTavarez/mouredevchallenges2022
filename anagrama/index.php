@@ -12,18 +12,22 @@
 
 function isAnagram(string $firstWord, string $secondWord): bool
 {
-    $firstWord = str_split( strtolower( trim($firstWord) ) );
-    $secondWord = str_split( strtolower( trim($secondWord ) ) );
+    if ($firstWord != $secondWord) {
+        $firstWord = str_split(strtolower(trim($firstWord)));
+        $secondWord = str_split(strtolower(trim($secondWord)));
 
-    foreach ($firstWord as $letter) {
-        (array_search($letter, $secondWord) == '' ? $search_result = 'vacio' : $search_result = 'lleno').PHP_EOL;
+        foreach ($firstWord as $letter) {
+            (array_search($letter, $secondWord) == '' ? $search_result = 'vacio' : $search_result = 'lleno') . PHP_EOL;
 
-        if($search_result == 'vacio') {
-            return false;
+            if ($search_result == 'vacio') {
+                return false;
+            }
         }
+
+        return true;
     }
 
-    return true;
+    return false;
 }
 
-echo isAnagram('Castor ', 'castro').PHP_EOL;
+echo isAnagram('Castor', 'Castor') . PHP_EOL;
